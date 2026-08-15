@@ -1,0 +1,1 @@
+Upload contents.html and assets to the main/root of GitHub. Replace existing files when prompted. This only adjusts the mobile Contents button hitboxes.
