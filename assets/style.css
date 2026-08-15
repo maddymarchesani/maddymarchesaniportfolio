@@ -18,3 +18,15 @@ a{color:inherit}
 .back-arrow svg{width:24px;height:24px;fill:none;stroke:var(--red);stroke-width:2.15;stroke-linecap:round;stroke-linejoin:round}
 .back-arrow:hover,.back-arrow:focus-visible{background:#fff;transform:translateX(-1px);outline:2px solid rgba(139,46,68,.35)}
 @media(max-width:700px){.back-arrow{top:9px;left:9px;width:34px;height:34px}.back-arrow svg{width:21px;height:21px}.tile-link::after{font-size:12px;padding:6px}.contents-link::after{display:none}}
+
+
+.desktop-only{display:block}
+.mobile-only{display:none}
+@media (max-width: 768px){
+  .desktop-only{display:none !important}
+  .mobile-only{display:block !important}
+  .svg-page{width:100vw}
+  .svg-page .design-bg{width:100%;height:auto}
+  .contents-link:hover,.contents-link:focus-visible{background:rgba(217,217,217,.26)}
+  .home-button:hover,.home-button:focus-visible{background:rgba(217,217,217,.26)}
+}
