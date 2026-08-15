@@ -1,1 +1,0 @@
-Upload all files and the assets folder contents into the same repo, replacing files when prompted. This patch updates mobile view for home, contents, about, and contact.
