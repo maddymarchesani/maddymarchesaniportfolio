@@ -1,38 +1,64 @@
+
 :root{--red:#8b2e44;--white:#f7f6f4;--grey:#d9d9d9;--baby-blue:#b8d9ee;--black:#121212}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--red);color:var(--white);font-family:"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
 a{color:inherit}
 .svg-page{position:relative;width:100vw;margin:0 auto;background:var(--red);line-height:0}
+.svg-page picture{display:block;width:100%;line-height:0}
 .svg-page .design-bg{display:block;width:100%;height:auto;user-select:none;pointer-events:none;image-rendering:auto}
-.hotlink{position:absolute;z-index:20;display:flex;align-items:center;justify-content:center;text-decoration:none;color:transparent;border-radius:2px;transition:background .18s ease,color .18s ease,opacity .18s ease;outline-offset:4px;line-height:1.1;cursor:pointer}
-.hotlink:hover,.hotlink:focus-visible{outline:none}
-.home-button:hover,.home-button:focus-visible{background:rgba(217,217,217,.38);color:transparent;border-radius:999px}
-.contents-link:hover,.contents-link:focus-visible{background:rgba(217,217,217,.38);color:transparent;border-radius:2px}
+.hotlink,.mobile-page-link{position:absolute;z-index:20;display:flex;align-items:center;justify-content:center;text-decoration:none;color:transparent;border-radius:2px;transition:background .18s ease,color .18s ease,opacity .18s ease;outline-offset:4px;line-height:1.1;cursor:pointer}
+.hotlink:hover,.hotlink:focus-visible,.mobile-page-link:hover,.mobile-page-link:focus-visible{outline:none}
+.home-button:hover,.home-button:focus-visible,.home-mobile-link:hover,.home-mobile-link:focus-visible{background:rgba(217,217,217,.38);color:transparent;border-radius:999px}
+.contents-link:hover,.contents-link:focus-visible,.mobile-page-link:hover,.mobile-page-link:focus-visible{background:rgba(217,217,217,.38);color:transparent;border-radius:2px}
 .contents-link::after{content:"";display:none}
 .contents-link:hover::after,.contents-link:focus-visible::after{opacity:0}
 .tile-link::after{content:attr(data-title);opacity:0;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:1rem;font-size:clamp(18px,2vw,34px);font-weight:300;letter-spacing:.04em;line-height:1.05;color:var(--red);background:rgba(217,217,217,.86);text-transform:uppercase;transition:opacity .18s ease}
 .tile-link:hover::after,.tile-link:focus-visible::after{opacity:1}
-.contact-hotlink:hover,.contact-hotlink:focus-visible{background:rgba(184,217,238,.28)}
+.contact-hotlink:hover,.contact-hotlink:focus-visible,.contact-phone:hover,.contact-email:hover,.contact-linkedin:hover,.contact-phone:focus-visible,.contact-email:focus-visible,.contact-linkedin:focus-visible{background:rgba(184,217,238,.28)}
 .back-arrow{position:fixed;top:16px;left:16px;z-index:100;width:40px;height:40px;border-radius:999px;background:rgba(247,246,244,.92);border:1px solid rgba(139,46,68,.22);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.12);line-height:0;text-decoration:none;transition:background .16s ease,transform .16s ease}
 .back-arrow svg{width:24px;height:24px;fill:none;stroke:var(--red);stroke-width:2.15;stroke-linecap:round;stroke-linejoin:round}
 .back-arrow:hover,.back-arrow:focus-visible{background:#fff;transform:translateX(-1px);outline:2px solid rgba(139,46,68,.35)}
-@media(max-width:700px){.back-arrow{top:9px;left:9px;width:34px;height:34px}.back-arrow svg{width:21px;height:21px}.tile-link::after{font-size:12px;padding:6px}.contents-link::after{display:none}}
+
+/* Desktop positions for pages replaced by this patch */
+.home-mobile-link{left:43.72865%;top:85.93750%;width:14.15325%;height:5.20833%}
+.content-about{left:48.12103%;top:26.56250%;width:32.21083%;height:7.81250%}
+.content-collections{left:48.12103%;top:36.11111%;width:32.21083%;height:7.81250%}
+.content-photography{left:48.12103%;top:45.65972%;width:32.21083%;height:7.81250%}
+.content-print{left:48.12103%;top:55.20833%;width:32.21083%;height:7.81250%}
+.content-events{left:48.12103%;top:64.75694%;width:32.21083%;height:7.81250%}
+.content-contact{left:48.12103%;top:74.30556%;width:32.21083%;height:7.81250%}
+.contact-phone{left:7.41825%;top:63.88889%;width:34.65105%;height:5.55556%}
+.contact-email{left:7.41825%;top:69.44444%;width:41.97169%;height:5.90278%}
+.contact-linkedin{left:7.41825%;top:77.77778%;width:81.01513%;height:6.59722%}
+
+@media(max-width:768px){
+  .svg-page{width:100vw}
+  .back-arrow{top:9px;left:9px;width:34px;height:34px}.back-arrow svg{width:21px;height:21px}
+  .tile-link::after{font-size:12px;padding:6px}
+  .home-mobile-link{left:39.5%;top:58.6%;width:24.5%;height:4.2%}
+  .content-about{left:8.3%;top:38.2%;width:84.0%;height:6.6%}
+  .content-collections{left:8.3%;top:45.8%;width:84.0%;height:6.6%}
+  .content-photography{left:8.3%;top:53.4%;width:84.0%;height:6.6%}
+  .content-print{left:8.3%;top:61.0%;width:84.0%;height:6.6%}
+  .content-events{left:8.3%;top:68.6%;width:84.0%;height:6.6%}
+  .content-contact{left:8.3%;top:76.2%;width:84.0%;height:6.6%}
+  .contact-phone{left:10.0%;top:44.8%;width:48%;height:3.8%}
+  .contact-email{left:10.0%;top:48.9%;width:65%;height:4.2%}
+  .contact-linkedin{left:10.0%;top:56.0%;width:74%;height:11.0%}
+}
 
 
-/* CONTENTS MOBILE FIX - prevents desktop and mobile stacking */
+/* FINAL CONTENTS + HOME FIX: keeps Home button absolute and fixes Contents desktop/mobile switching */
 .desktop-img { display: block !important; }
 .mobile-img { display: none !important; }
-
 .contents-mobile-link { display: none !important; }
 
 @media (max-width: 768px) {
   .contents-desktop-img { display: none !important; }
   .contents-mobile-img { display: block !important; width: 100% !important; height: auto !important; }
-
   .contents-desktop-link { display: none !important; pointer-events: none !important; }
   .contents-mobile-link { display: block !important; pointer-events: auto !important; }
-
   .contents-mobile-link:hover,
   .contents-mobile-link:focus-visible {
     background: rgba(217,217,217,.28) !important;
@@ -43,7 +69,6 @@ a{color:inherit}
 @media (min-width: 769px) {
   .contents-desktop-img { display: block !important; }
   .contents-mobile-img { display: none !important; }
-
   .contents-desktop-link { display: block !important; pointer-events: auto !important; }
   .contents-mobile-link { display: none !important; pointer-events: none !important; }
 }

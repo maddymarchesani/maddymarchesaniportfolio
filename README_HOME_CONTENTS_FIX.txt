@@ -1,0 +1,1 @@
+Upload contents of this folder to GitHub root. Replace existing files. This restores the Home button and keeps the mobile Contents alignment fix.
