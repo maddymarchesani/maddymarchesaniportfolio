@@ -1,0 +1,1 @@
+Upload the CONTENTS of this folder to the main/root of GitHub and replace files when prompted. This fixes the desktop/mobile stacking and restores buttons.
