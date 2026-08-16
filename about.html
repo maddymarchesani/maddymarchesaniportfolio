@@ -4,17 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me | Maddy Marchesani Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css?v=no-stack-fix">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .about-desktop-img { display: block; width: 100%; height: auto; }
+    .about-mobile-img { display: none; width: 100%; height: auto; }
+
+    @media (max-width: 768px) {
+      .about-desktop-img { display: none !important; }
+      .about-mobile-img { display: block !important; }
+    }
+
+    @media (min-width: 769px) {
+      .about-desktop-img { display: block !important; }
+      .about-mobile-img { display: none !important; }
+    }
+  </style>
 </head>
 <body>
   <main class="svg-page" aria-label="About Me">
     <a class="back-arrow" href="contents.html" aria-label="Back">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19 7.5L10.5 16L19 24.5"/><path d="M11 16H25"/></svg>
     </a>
-    <picture>
-      <source media="(max-width: 768px)" srcset="assets/pages/about-mobile.png">
-      <img class="design-bg" src="assets/pages/about.png" alt="About Me" draggable="false">
-    </picture>
+
+    <img class="design-bg about-desktop-img" src="assets/pages/about.png" alt="About Me" draggable="false">
+    <img class="design-bg about-mobile-img" src="assets/pages/about-mobile.png" alt="About Me mobile" draggable="false">
   </main>
 </body>
 </html>

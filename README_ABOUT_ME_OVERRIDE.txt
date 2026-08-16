@@ -1,0 +1,1 @@
+Upload the contents of this folder to your GitHub repo root. Replace/overwrite existing files when prompted. This only updates the About Me desktop and mobile pages.
