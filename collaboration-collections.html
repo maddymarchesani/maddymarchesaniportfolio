@@ -41,7 +41,22 @@ a.back:hover,a.back:focus-visible{background:transparent!important;color:var(--p
 a.back:hover .arrow,a.back:hover .arr,a.back:focus-visible .arrow,a.back:focus-visible .arr{transform:translateX(-4px)!important}
 a.back:focus-visible{outline:1px solid currentColor!important;outline-offset:2px!important}
 @media(prefers-reduced-motion:reduce){a.back,a.back .arrow,a.back .arr{transition:none!important}}
-</style></head><body><a aria-label="Back to previous portfolio section" class="back" href="collection-gallery.html"><span aria-hidden="true" class="arrow">←</span></a><main><img alt="Collaboration Collections collection by Maddy Marchesani" class="artwork" decoding="sync" src="art-collaboration-collections.svg"/><a aria-label="View Suede Brooks collaboration" class="collab collab-left" href="suede-brooks-collaboration.html" id="exact-hover-0"><span>SUEDE BROOKS<br/>COLLABORATION</span></a><a aria-label="View Sam Guggenheimer collaboration" class="collab collab-right" href="sam-guggenheimer-collaboration.html" id="exact-hover-1"><span>SAM GUGGENHEIMER<br/>COLLABORATION</span></a></main><script>
+</style>
+<style id="mobile-portfolio-styles">
+.mobile-portfolio{display:none}
+@media(max-width:700px){
+ html,body{max-width:100%;overflow-x:hidden}
+ body>:not(.mobile-portfolio):not(script){display:none!important}
+ .mobile-portfolio{display:block!important;position:relative;width:100%;max-width:700px;margin:0 auto;line-height:0;background:#892e44}
+ .mobile-portfolio .mobile-image{display:block;width:100%;height:auto}
+ .mobile-portfolio .mobile-hit{position:absolute;z-index:4;display:block;text-decoration:none;border:0;outline-offset:-3px;-webkit-tap-highlight-color:rgba(255,255,255,.15);border-radius:2px}
+ .mobile-portfolio .mobile-hit:focus-visible{outline:2px solid #fff;background:rgba(255,255,255,.12)}
+ .mobile-portfolio .mobile-back{position:absolute;z-index:5;top:1%;left:1.7%;display:grid;place-items:center;width:38px;height:38px;line-height:1;color:#f8f3f1;text-decoration:none;font-size:30px;font-family:Arial,Helvetica,sans-serif;-webkit-tap-highlight-color:transparent}
+ .mobile-portfolio .mobile-back:focus-visible{outline:2px solid currentColor}
+}
+</style>
+</head><body>
+<div class="mobile-portfolio" aria-label="Mobile portfolio page"><img class="mobile-image" src="collaborations-mobile.png" alt="" aria-hidden="true" width="1080" height="1920" decoding="async"/><a class="mobile-hit" aria-label="Suede Brooks collaboration" href="suede-brooks-collaboration.html" style="left:1%;top:42.2%;width:49.9%;height:46.8%"></a><a class="mobile-hit" aria-label="Sam Guggenheimer collaboration" href="sam-guggenheimer-collaboration.html" style="left:51%;top:42.2%;width:49%;height:46.8%"></a><a class="mobile-back" aria-label="Back" href="collection-gallery.html">←</a></div><a aria-label="Back to previous portfolio section" class="back" href="collection-gallery.html"><span aria-hidden="true" class="arrow">←</span></a><main><img alt="Collaboration Collections collection by Maddy Marchesani" class="artwork" decoding="sync" src="art-collaboration-collections.svg"/><a aria-label="View Suede Brooks collaboration" class="collab collab-left" href="suede-brooks-collaboration.html" id="exact-hover-0"><span>SUEDE BROOKS<br/>COLLABORATION</span></a><a aria-label="View Sam Guggenheimer collaboration" class="collab collab-right" href="sam-guggenheimer-collaboration.html" id="exact-hover-1"><span>SAM GUGGENHEIMER<br/>COLLABORATION</span></a></main><script>
 (function(){
  const source=new URLSearchParams(window.location.search).get('from');
  if(source!=='contents')return;

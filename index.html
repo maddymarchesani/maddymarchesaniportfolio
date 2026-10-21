@@ -48,8 +48,23 @@ a.back:focus-visible{outline:2px solid #892e44!important;outline-offset:3px!impo
 </style><style>.contents-link span:first-child{display:inline-block;transition:color .25s ease,transform .25s ease,opacity .25s ease!important}.contents-link:hover span:first-child,.contents-link:focus-visible span:first-child{color:#f8d5de!important;transform:translateX(-4px)!important;opacity:.85!important}</style><style>
 /* Exact native SVG artwork; no raster downsampling */
 .artboard{width:100%!important;max-width:none!important;background-image:url("art-index.svg")!important;background-position:top center!important;background-size:100% 100%!important;background-repeat:no-repeat!important}
-</style><meta content="notranslate" name="google"/><style id="fix-bottom-line">.artboard::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:#8b2e44;pointer-events:none;z-index:1}.contents-link{z-index:2}</style></head>
+</style><meta content="notranslate" name="google"/><style id="fix-bottom-line">.artboard::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:#8b2e44;pointer-events:none;z-index:1}.contents-link{z-index:2}</style>
+<style id="mobile-portfolio-styles">
+.mobile-portfolio{display:none}
+@media(max-width:700px){
+ html,body{max-width:100%;overflow-x:hidden}
+ body>:not(.mobile-portfolio):not(script){display:none!important}
+ .mobile-portfolio{display:block!important;position:relative;width:100%;max-width:700px;margin:0 auto;line-height:0;background:#892e44}
+ .mobile-portfolio .mobile-image{display:block;width:100%;height:auto}
+ .mobile-portfolio .mobile-hit{position:absolute;z-index:4;display:block;text-decoration:none;border:0;outline-offset:-3px;-webkit-tap-highlight-color:rgba(255,255,255,.15);border-radius:2px}
+ .mobile-portfolio .mobile-hit:focus-visible{outline:2px solid #fff;background:rgba(255,255,255,.12)}
+ .mobile-portfolio .mobile-back{position:absolute;z-index:5;top:1%;left:1.7%;display:grid;place-items:center;width:38px;height:38px;line-height:1;color:#f8f3f1;text-decoration:none;font-size:30px;font-family:Arial,Helvetica,sans-serif;-webkit-tap-highlight-color:transparent}
+ .mobile-portfolio .mobile-back:focus-visible{outline:2px solid currentColor}
+}
+</style>
+</head>
 <body>
+<div class="mobile-portfolio" aria-label="Mobile portfolio page"><img class="mobile-image" src="home-mobile.png" alt="" aria-hidden="true" width="1080" height="1920" decoding="async"/><a class="mobile-hit" aria-label="View portfolio contents" href="contents.html" style="left:38%;top:52%;width:26%;height:9%"></a></div>
 <main>
 <div aria-label="Creative Portfolio — Maddy Marchesani, Creative Director and Designer" class="artboard" role="img">
 <div aria-hidden="true" class="contents-cover"></div>

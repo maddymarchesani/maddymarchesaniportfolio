@@ -75,8 +75,23 @@ a.back:hover,a.back:focus-visible{background:transparent!important;color:var(--p
 a.back:hover .arrow,a.back:hover .arr,a.back:focus-visible .arrow,a.back:focus-visible .arr{transform:translateX(-4px)!important}
 a.back:focus-visible{outline:1px solid currentColor!important;outline-offset:2px!important}
 @media(prefers-reduced-motion:reduce){a.back,a.back .arrow,a.back .arr{transition:none!important}}
-</style></head>
-<body><main><div class="artboard">
+</style>
+<style id="mobile-portfolio-styles">
+.mobile-portfolio{display:none}
+@media(max-width:700px){
+ html,body{max-width:100%;overflow-x:hidden}
+ body>:not(.mobile-portfolio):not(script){display:none!important}
+ .mobile-portfolio{display:block!important;position:relative;width:100%;max-width:700px;margin:0 auto;line-height:0;background:#892e44}
+ .mobile-portfolio .mobile-image{display:block;width:100%;height:auto}
+ .mobile-portfolio .mobile-hit{position:absolute;z-index:4;display:block;text-decoration:none;border:0;outline-offset:-3px;-webkit-tap-highlight-color:rgba(255,255,255,.15);border-radius:2px}
+ .mobile-portfolio .mobile-hit:focus-visible{outline:2px solid #fff;background:rgba(255,255,255,.12)}
+ .mobile-portfolio .mobile-back{position:absolute;z-index:5;top:1%;left:1.7%;display:grid;place-items:center;width:38px;height:38px;line-height:1;color:#f8f3f1;text-decoration:none;font-size:30px;font-family:Arial,Helvetica,sans-serif;-webkit-tap-highlight-color:transparent}
+ .mobile-portfolio .mobile-back:focus-visible{outline:2px solid currentColor}
+}
+</style>
+</head>
+<body>
+<div class="mobile-portfolio" aria-label="Mobile portfolio page"><img class="mobile-image" src="contents-mobile.png" alt="" aria-hidden="true" width="1080" height="1920" decoding="async"/><a class="mobile-hit" aria-label="About Me" href="about.html" style="left:9%;top:35.2%;width:82%;height:5.0%"></a><a class="mobile-hit" aria-label="Fashion Design" href="fashion-design.html" style="left:9%;top:40%;width:82%;height:5%"></a><a class="mobile-hit" aria-label="Creative Direction, Design & Styling" href="collection-gallery.html?from=contents" style="left:9%;top:44.8%;width:82%;height:5.100000000000001%"></a><a class="mobile-hit" aria-label="Print & Textile Design" href="print-textile-design.html" style="left:9%;top:49.8%;width:82%;height:4.900000000000006%"></a><a class="mobile-hit" aria-label="Events" href="events.html" style="left:9%;top:54.7%;width:82%;height:4.799999999999997%"></a><a class="mobile-hit" aria-label="Photography" href="photography.html" style="left:9%;top:59.5%;width:82%;height:4.900000000000006%"></a><a class="mobile-hit" aria-label="Contact" href="contact.html" style="left:9%;top:64.4%;width:82%;height:4.8999999999999915%"></a><a class="mobile-back" aria-label="Back" href="index.html">←</a></div><main><div class="artboard">
 <nav aria-label="Portfolio contents" class="menu">
 <a href="about.html"><span>01</span><span>ABOUT ME</span></a>
 <a href="fashion-design.html"><span>02</span><span>FASHION DESIGN</span></a>
